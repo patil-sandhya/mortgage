@@ -65,7 +65,7 @@ const SearchBtn = ({ type, handleEdit }) => {
   };
 
   const handleSelect = (val) => {
-    if (val.status == "Pending") {
+    if (val.status == "Pending" && type != "admin" ) {
       handleEdit(val.id);
     } else {
       handleShow(val);
