@@ -1,6 +1,6 @@
 const Alert = ({ alertType, message }) => {
   const alertClasses = {
-    success: 'bg-[#98FB98] border-[#98FB98] text-[#00693E]',
+    success: 'bg-[#AEEA94] border-[#AEEA94] text-[#017444]',
     warning: 'bg-yellow-200 border-yellow-200 text-yellow-700',
     error: 'bg-red-100 border-red-400 text-red-700'
   };
