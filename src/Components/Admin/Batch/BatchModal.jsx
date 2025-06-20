@@ -5,7 +5,7 @@ import BatchApiServies from '@/Services/BatchApi';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-export default function BatchModal({closeFunc}) {
+export default function BatchModal({closeFunc,getBatches}) {
   const [batchName, setBatchName] = useState('');
   const [batchType, setBatchType] = useState('Daily'); 
   const {handleUserLogout} = useAuth()
@@ -21,6 +21,7 @@ export default function BatchModal({closeFunc}) {
         let res = await BatchApiServies.post_create(data);
         if(res?.status == 201){
             setAlert('success', 'New batch created!')
+            getBatches()
         }
         console.log(res, "create batch")
     } catch (error) {

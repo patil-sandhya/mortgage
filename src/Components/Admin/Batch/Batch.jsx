@@ -93,7 +93,7 @@ const Batch = () => {
     <div className="mt-20 mx-4 sm:mx-5 pb-16 sm:pb-2">
       {
             showCreate && (
-              <BatchModal closeFunc={()=> setShowCreate(false)} />
+              <BatchModal getBatches={getBatches} closeFunc={()=> setShowCreate(false)} />
             )
           }
       {
@@ -132,7 +132,7 @@ const Batch = () => {
                 </div>
               </div>
             </div>
-            <button onClick={getBatches}>Add</button>
+            {/* <button onClick={getBatches}>Add</button> */}
             
           </div>
            <div className='mx-1 my-5 flex flex-wrap gap-8 justify-center items-center '>
