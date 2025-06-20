@@ -2,16 +2,16 @@
 import { useAlertAndLoader } from "@/app/layout";
 import { useAuth } from "@/context/AuthContext/AuthContext";
 import {
-  Phone,
-  Star,
-  Send,
+ 
   Users,
   ArrowRight,
   List,
   LogOut,
   MessageCircle,
   Menu,
+  Bookmark,
   X,
+  BookPlus,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,7 +26,7 @@ const ProfileDropDown = ({ userDetails, closeFunc }) => {
   const handelLogout = () => {
     handleUserLogout();
     setAlert("success", "Successfully Logout");
-    router.push("/sign-up");
+    router.push("/");
   };
 
   useEffect(() => {
@@ -94,7 +94,14 @@ const Navbar = () => {
   const [showProfile, setShowProfile] = useState(false);
   const { isLoggedIn, userData } = useAuth();
     const pathName = usePathname();
-
+ const { handleUserLogout } = useAuth();
+  const { setAlert } = useAlertAndLoader();
+  const router = useRouter();
+  const handelLogout = () => {
+    handleUserLogout();
+    setAlert("success", "Successfully Logout");
+    router.push("/");
+  };
   const handleActiveTab = (val)=>{
     setActiveTab(val)
   }
@@ -219,7 +226,7 @@ const Navbar = () => {
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 " />
             ) : (
               <Menu className="w-6 h-6" />
             )}
@@ -243,20 +250,56 @@ const Navbar = () => {
                 </span>
               </div>
               <nav className="flex flex-col  p-2 space-y-4">
-                <Link
-                  href="#"
+                {
+                 (userData?.role == "VA") ? (
+                  <>
+                  <Link
+                  href="/user/user-records"
                   className="text-gray-600 flex gap-4 hover:text-gray-900 transition-colors py-2 border-b border-gray-100"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <List /> Records
                 </Link>
                 <Link
-                  href=""
+                  href="/"
                   className="text-gray-600 flex gap-4 hover:text-gray-900 transition-colors py-2 border-b border-gray-100"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={handelLogout}
                 >
                   <LogOut /> Logout
                 </Link>
+                  </>
+                 ) : (<>
+                  <Link
+                  href="/admin/dashboard"
+                  className="text-gray-600 flex gap-4 hover:text-gray-900 transition-colors py-2 border-b border-gray-100"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <List /> Records
+                </Link>
+                <Link
+                  href="/admin/batch"
+                  className="text-gray-600 flex gap-4 hover:text-gray-900 transition-colors py-2 border-b border-gray-100"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <BookPlus /> Batch
+                </Link>
+                <Link
+                  href="/admin/logs"
+                  className="text-gray-600 flex gap-4 hover:text-gray-900 transition-colors py-2 border-b border-gray-100"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Bookmark /> Logs
+                </Link>
+                 <Link
+                  href="/"
+                  className="text-gray-600 flex gap-4 hover:text-gray-900 transition-colors py-2 border-b border-gray-100"
+                  onClick={handelLogout}
+                >
+                  <LogOut /> Logout
+                </Link>
+                 </>) 
+                }
+                
               </nav>
             </div>
           </div>

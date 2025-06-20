@@ -113,7 +113,7 @@ const Dashboard = () => {
   return (
     <div className="mt-20 mx-4 sm:mx-5">
       <div className="my-5 flex flex-col md:flex-row md:justify-between">
-            <div className="flex md:w-1/2 gap-4 sm:gap-0 items-center   justify-start ">
+            <div className="flex md:w-1/2 gap-4 sm:gap-0 sm:items-center flex-col sm:flex-row justify-start ">
               <div className="my-2  md:m-2 lg:m-5" ref={filterStatusRef}>
                 <h3 className="text-md m-2 font-semibold">Filter Status</h3>
                 <div className="relative inline-block text-left">
