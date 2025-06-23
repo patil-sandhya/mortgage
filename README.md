@@ -11,7 +11,7 @@ Admins have access to all records, can create and assign batches, manage VA acco
 
 ## 🚀 Live Demo
 
-🌐 [View Live Website](https://forky-ten.vercel.app/menu)
+🌐 [View Live Website](https://mortgagepro-nine.vercel.app/)
 
 ---
 
@@ -20,29 +20,35 @@ Admins have access to all records, can create and assign batches, manage VA acco
 ### ✅ Signup/Login
 - New VA users can register themselves.
 - Role-based redirection after login.
+![Screenshot 2025-06-23 101649](https://github.com/user-attachments/assets/f2664727-d2b1-4cd8-811a-e7fc081d895e)
 
 
 ### 📋 Record Page (For VAs)
 - Paginated list of assigned records.
 - Crate, lock and edit a record.
 - Mark record as Verified or Flagged.
+![Screenshot 2025-06-23 101800](https://github.com/user-attachments/assets/b45d4989-385f-49bc-8f40-03e604ebf7fa)
 
 
 ### 📑 Records Page (Admin)
 - Search and filter all records.
 - Assign records to batches.
 - See user names for each action (entered by, reviewed by, locked by).
+![Screenshot 2025-06-23 101913](https://github.com/user-attachments/assets/dc645d6e-4672-454a-be3f-0a808200ec17)
 
 
 ### 📦 Batch Page (Admin)
 - Create new batches (unique name).
 - Assign multiple records to a batch.
 - View records grouped by batch.
+![Screenshot 2025-06-23 102045](https://github.com/user-attachments/assets/0b76246b-52d1-4844-8272-3900c02ea030)
+
 
 
 ### 📜 Audit Logs (Admin)
 - Track every data entry, edit, and review with timestamp and VA identity.
-- 
+- ![Screenshot 2025-06-23 102138](https://github.com/user-attachments/assets/2bf3e578-9927-4f69-920c-955806b332d5)
+
 ---
 
 ## 🛠️ Tech Stack
