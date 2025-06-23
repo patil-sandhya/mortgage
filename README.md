@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+#  MortgagePro - Mortgage Data Entry and Verification System
 
-First, run the development server:
+The Mortgage Data Entry and Verification System is a web-based application designed to streamline the process of entering, reviewing, and managing mortgage records. It includes two main user roles: Admins and VAs (Virtual Assistants).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+VAs can log in, view only the records assigned to them, lock and edit data, and mark records as Verified or Flagged.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Admins have access to all records, can create and assign batches, manage VA accounts, and review a complete audit trail of all user actions for compliance.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Live Demo
 
-## Learn More
+🌐 [View Live Website](https://forky-ten.vercel.app/menu)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🖼️ Pages Overview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ✅ Signup/Login
+- New VA users can register themselves.
+- Role-based redirection after login.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📋 Record Page (For VAs)
+- Paginated list of assigned records.
+- Crate, lock and edit a record.
+- Mark record as Verified or Flagged.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### 📑 Records Page (Admin)
+- Search and filter all records.
+- Assign records to batches.
+- See user names for each action (entered by, reviewed by, locked by).
+
+
+### 📦 Batch Page (Admin)
+- Create new batches (unique name).
+- Assign multiple records to a batch.
+- View records grouped by batch.
+
+
+### 📜 Audit Logs (Admin)
+- Track every data entry, edit, and review with timestamp and VA identity.
+- 
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, React.js, Tailwind CSS
+- **Backend**: Nest.js, TypeORM
+- **Database**: PostgreSql
+- **Deployment**: Vercel (Frontend), Render (Backend)
+
+---
+
+## 📦 Features
+### Authentication
+
+- Signup for new VA accounts.
+
+- Login with role-based dashboard access (Admin/VA).
+
+### VA Dashboard
+
+- View only assigned records.
+
+- Create, edit, lock and review records (Verify/Flag).
+
+- View batch name and user info.
+
+### Admin Dashboard
+
+- View and manage all records.
+
+- Search records by name, address, or APN.
+
+- Filter by status or unassigned.
+
+- Create batches and assign records.
+
+- View audit logs (entry/edit/review actions).
+
+---
+
+
