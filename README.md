@@ -44,13 +44,15 @@ Admins have access to all records, can create and assign batches, manage VA acco
 - Create new batches (unique name).
 - Assign multiple records to a batch.
 - View records grouped by batch.
+  
 ![Screenshot 2025-06-23 102045](https://github.com/user-attachments/assets/0b76246b-52d1-4844-8272-3900c02ea030)
 
 
 
 ### 📜 Audit Logs (Admin)
 - Track every data entry, edit, and review with timestamp and VA identity.
-- ![Screenshot 2025-06-23 102138](https://github.com/user-attachments/assets/2bf3e578-9927-4f69-920c-955806b332d5)
+
+![Screenshot 2025-06-23 102138](https://github.com/user-attachments/assets/2bf3e578-9927-4f69-920c-955806b332d5)
 
 ---
 
